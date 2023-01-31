@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GJG.Business.Abstract;
-using GJG.Business.Concrete;
-using GJG.Entities;
+using Sample.Business.Abstract;
+using Sample.Business.Concrete;
+using Sample.Entities;
 
-namespace GJG.Api.Controllers
+namespace Sample.Api.Controllers
 {
     [Route("")]
     [ApiController]

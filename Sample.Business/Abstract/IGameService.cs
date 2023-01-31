@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GJG.Entities;
+using Sample.Entities;
 
-namespace GJG.Business.Abstract
+namespace Sample.Business.Abstract
 {
     public interface IGameService
     {

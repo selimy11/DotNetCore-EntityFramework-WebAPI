@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.33027.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GJG.Entities", "GJG.Entities\GJG.Entities.csproj", "{4C126ECE-B6CB-42A9-A7C1-1344EEE0DF7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Entities", "Sample.Entities\Sample.Entities.csproj", "{4C126ECE-B6CB-42A9-A7C1-1344EEE0DF7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GJG.DataAccess", "GJG.DataAccess\GJG.DataAccess.csproj", "{269DE871-EF03-4F23-987B-4EC2E1A799B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.DataAccess", "Sample.DataAccess\Sample.DataAccess.csproj", "{269DE871-EF03-4F23-987B-4EC2E1A799B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GJG.Business", "GJG.Business\GJG.Business.csproj", "{920EFCCE-017D-4BA8-A859-3CE7B3B29544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Business", "Sample.Business\Sample.Business.csproj", "{920EFCCE-017D-4BA8-A859-3CE7B3B29544}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GJG.Api", "GJG.Api\GJG.Api.csproj", "{7844FCB9-59B4-45FA-ABD3-43049A8CC17B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Api", "Sample.Api\Sample.Api.csproj", "{7844FCB9-59B4-45FA-ABD3-43049A8CC17B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

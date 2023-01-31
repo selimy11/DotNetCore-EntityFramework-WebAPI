@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GJG.Entities
+namespace Sample.Entities
 {
     public class ReUser
     {

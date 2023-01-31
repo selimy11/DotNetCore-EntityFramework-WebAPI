@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GJG.Business.Abstract;
-using GJG.DataAccess.Abstract;
-using GJG.DataAccess.Concrete;
-using GJG.Entities;
+using Sample.Business.Abstract;
+using Sample.DataAccess.Abstract;
+using Sample.DataAccess.Concrete;
+using Sample.Entities;
 
-namespace GJG.Business.Concrete
+namespace Sample.Business.Concrete
 {
     public class GameManager : IGameService
     {

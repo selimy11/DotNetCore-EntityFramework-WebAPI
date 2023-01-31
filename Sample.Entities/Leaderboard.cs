@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace GJG.Entities
+namespace Sample.Entities
 {
     public class Leaderboard
     {

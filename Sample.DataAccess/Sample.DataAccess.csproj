@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GJG.Entities\GJG.Entities.csproj" />
+    <ProjectReference Include="..\Sample.Entities\Sample.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using GJG.DataAccess.Abstract;
-using GJG.Entities;
+using Sample.DataAccess.Abstract;
+using Sample.Entities;
 
-namespace GJG.DataAccess.Concrete
+namespace Sample.DataAccess.Concrete
 {
     public class GameRepository : IGameRepository
     {
@@ -14,9 +14,9 @@ namespace GJG.DataAccess.Concrete
         {
             List<ReLeaderboard> res = new List<ReLeaderboard>();
 
-            using (var GJGDbContext = new GJGDbContext())
+            using (var SampleDbContext = new SampleDbContext())
             {
-                var data = GJGDbContext.Leaderboards.OrderByDescending(p => p.Points).ToList();
+                var data = SampleDbContext.Leaderboards.OrderByDescending(p => p.Points).ToList();
 
                 for (int i = 0; i < data.Count; i++)
                 {
@@ -44,9 +44,9 @@ namespace GJG.DataAccess.Concrete
         {
             List<ReLeaderboard> res = new List<ReLeaderboard>();
 
-            using (var GJGDbContext = new GJGDbContext())
+            using (var SampleDbContext = new SampleDbContext())
             {
-                var data = GJGDbContext.Leaderboards.OrderByDescending(p => p.Points).ToList();
+                var data = SampleDbContext.Leaderboards.OrderByDescending(p => p.Points).ToList();
 
                 for (int i = 0; i < data.Count; i++)
                 {
@@ -74,7 +74,7 @@ namespace GJG.DataAccess.Concrete
         {
             ReSubmit res = new ReSubmit();
 
-            using (var GJGDbContext = new GJGDbContext())
+            using (var SampleDbContext = new SampleDbContext())
             {
                 var lb = GetLeaderboard(submit.User_Id);
 
@@ -86,9 +86,9 @@ namespace GJG.DataAccess.Concrete
                     Timestamp = DateTime.Now.ToFileTime()
                 };
 
-                GJGDbContext.Leaderboards.Update(dbLaderboard);
+                SampleDbContext.Leaderboards.Update(dbLaderboard);
 
-                GJGDbContext.SaveChanges();
+                SampleDbContext.SaveChanges();
 
                 ReRank();
 
@@ -123,7 +123,7 @@ namespace GJG.DataAccess.Concrete
 
 
 
-            using (var GJGDbContext = new GJGDbContext())
+            using (var SampleDbContext = new SampleDbContext())
             {
                 Guid newGuid = Guid.NewGuid();
                 var u = new User
@@ -141,9 +141,9 @@ namespace GJG.DataAccess.Concrete
                     Timestamp = DateTime.Now.ToFileTime()
                 };
 
-                GJGDbContext.Leaderboards.Add(lb);
-                GJGDbContext.Users.Add(u);
-                GJGDbContext.SaveChanges();
+                SampleDbContext.Leaderboards.Add(lb);
+                SampleDbContext.Users.Add(u);
+                SampleDbContext.SaveChanges();
 
                 res.Display_Name = user.Display_Name;
                 res.Points = 0;
@@ -156,25 +156,25 @@ namespace GJG.DataAccess.Concrete
 
         private User GetUser(Guid userId)
         {
-            using (var GJGDbContext = new GJGDbContext())
+            using (var SampleDbContext = new SampleDbContext())
             {
-                return GJGDbContext.Users.FirstOrDefault(u => u.User_Id == userId);
+                return SampleDbContext.Users.FirstOrDefault(u => u.User_Id == userId);
             }
         }
 
         private Leaderboard GetLeaderboard(Guid userId)
         {
-            using (var GJGDbContext = new GJGDbContext())
+            using (var SampleDbContext = new SampleDbContext())
             {
-                return GJGDbContext.Leaderboards.FirstOrDefault(u => u.User_Id == userId);
+                return SampleDbContext.Leaderboards.FirstOrDefault(u => u.User_Id == userId);
             }
         }
 
         private void ReRank()
         {
-            using (var GJGDbContext = new GJGDbContext())
+            using (var SampleDbContext = new SampleDbContext())
             {
-                var list = GJGDbContext.Leaderboards.OrderByDescending(p=>p.Points).ToList();
+                var list = SampleDbContext.Leaderboards.OrderByDescending(p=>p.Points).ToList();
 
                 for (int i = 0; i < list.Count; i++)
                 {
@@ -183,10 +183,10 @@ namespace GJG.DataAccess.Concrete
 
                 foreach (var leaderboard in list)
                 {
-                    GJGDbContext.Leaderboards.Update(leaderboard);
+                    SampleDbContext.Leaderboards.Update(leaderboard);
                 }
 
-                GJGDbContext.SaveChanges();
+                SampleDbContext.SaveChanges();
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace GJG.Entities
+namespace Sample.Entities
 {
     public class User
     {

@@ -7,12 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GJG.Business.Abstract;
-using GJG.Business.Concrete;
-using GJG.DataAccess.Abstract;
-using GJG.DataAccess.Concrete;
+using Sample.Business.Abstract;
+using Sample.Business.Concrete;
+using Sample.DataAccess.Abstract;
+using Sample.DataAccess.Concrete;
 
-namespace GJG.Api
+namespace Sample.Api
 {
     public class Startup
     {
